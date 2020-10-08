@@ -3,6 +3,16 @@
   background-color: #0f3460 !important;
 }
 
+.cardSubtitle {
+  color: #fff;
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+.number {
+  padding: 20px 0;
+}
+
 @media (max-width: 770px) {
   .card {
     margin: 2% 0 !important;

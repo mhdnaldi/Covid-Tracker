@@ -18,13 +18,18 @@ const card = ({ className, cardTitle, value, cardSubtitle }) => {
         <Typography align="center" color="primary" gutterButtom>
           {cardTitle}
         </Typography>
-        <Typography align="center" variant="h5">
+        <Typography align="center" variant="h5" className={styles.number}>
           <CountUp start={0} end={value} duration={1} seperator=","></CountUp>
         </Typography>
         <Typography align="center" color="primary">
           People
         </Typography>
-        <Typography align="center" variant="body2" components="p">
+        <Typography
+          className={styles.cardSubtitle}
+          align="center"
+          variant="body2"
+          components="p"
+        >
           {cardSubtitle}
         </Typography>
       </CardContent>

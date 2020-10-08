@@ -28,6 +28,7 @@ const SortCountry = ({ handleCountryChange }) => {
   return (
     <FormControl className={styles.formControl}>
       <NativeSelect
+        className={styles.text}
         variant="standard"
         onChange={(event) => handleCountryChange(event)}
       >

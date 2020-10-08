@@ -16,15 +16,6 @@ class Home extends React.Component {
     this.getDataGlobal();
   }
 
-  handleCountryChange = (event) => {
-    let country = event.target.value;
-    this.getDataGlobal(country);
-    const setCountry = country ? country : "Global";
-    this.props.history.push({
-      search: `?country=${setCountry}`,
-    });
-  };
-
   getDataGlobal = (country) => {
     let setUrl = "https://covid19.mathdro.id/api";
     setUrl = country ? `${setUrl}/countries/${country}` : setUrl;
@@ -39,6 +30,15 @@ class Home extends React.Component {
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  handleCountryChange = (event) => {
+    let country = event.target.value;
+    this.getDataGlobal(country);
+    const setCountry = country ? country : "Global";
+    this.props.history.push({
+      search: `?country=${setCountry}`,
+    });
   };
 
   // RENDER TEMPAT TEMPLATE HTML

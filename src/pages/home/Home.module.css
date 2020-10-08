@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   background: #1a1a2e;
-  animation: anim 5s infinite;
+  animation: anim 4s infinite;
 }
 
 .image {
@@ -12,9 +12,7 @@
   margin-top: 30px;
   margin-bottom: 10px;
   position: relative;
-  /* animation-name: anim;
-  animation-duration: 4s; */
-  /* margin: 20px auto; */
+  animation: animate 4s infinite;
 }
 
 @keyframes anim {
@@ -32,6 +30,20 @@
   }
   100% {
     background: #1a1a2e;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: scaleX(1);
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleX(0.8);
+    transform: scaleY(0.8);
+  }
+  100% {
+    transform: scaleX(1);
+    transform: scaleY(1);
   }
 }
 
