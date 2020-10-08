@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import styles from "./Home.module.css";
-import headerImage from "../../images/head 3.png";
+import headerImage from "../../images/virus.png";
 import Typography from "@material-ui/core/Typography";
 import SortCountry from "../../components/sortCountry/SortCountry";
 import Cards from "../../components/cards/Cards";
@@ -48,7 +48,10 @@ class Home extends React.Component {
     return (
       <div className={styles.container}>
         <img className={styles.image} src={headerImage} alt="Covid-19" />
-        <Typography variant="subtitle2" color="textSecondary" gutterBottom>
+        <Typography color="error" gutterBottom variant="h3">
+          COVID-19
+        </Typography>
+        <Typography variant="subtitle2" color="error" gutterBottom>
           Last Update: {lastUpdate}
         </Typography>
         <SortCountry handleCountryChange={this.handleCountryChange} />

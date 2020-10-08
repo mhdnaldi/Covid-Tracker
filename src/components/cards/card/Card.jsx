@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./Card.module.css";
 import CountUp from "react-countup";
 import cn from "classnames";
@@ -15,14 +15,16 @@ const card = ({ className, cardTitle, value, cardSubtitle }) => {
       className={cn(styles.card, className)}
     >
       <CardContent>
-        <Typography color="textSecondary" gutterButtom>
+        <Typography align="center" color="primary" gutterButtom>
           {cardTitle}
         </Typography>
-        <Typography variant="h5">
+        <Typography align="center" variant="h5">
           <CountUp start={0} end={value} duration={1} seperator=","></CountUp>
         </Typography>
-        <Typography color="textSecondary">People</Typography>
-        <Typography variant="body2" componentes="p">
+        <Typography align="center" color="primary">
+          People
+        </Typography>
+        <Typography align="center" variant="body2" components="p">
           {cardSubtitle}
         </Typography>
       </CardContent>

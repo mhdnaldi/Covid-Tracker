@@ -6,7 +6,6 @@ import styles from "./SortCountry.module.css";
 const SortCountry = ({ handleCountryChange }) => {
   // SAMA SEPERTI STATE
   const [countries, setCountries] = useState([]);
-
   // USE EFFECT SM SEPERTI CREATED DI VUE
   useEffect(() => {
     getCountry();
@@ -28,7 +27,10 @@ const SortCountry = ({ handleCountryChange }) => {
 
   return (
     <FormControl className={styles.formControl}>
-      <NativeSelect onChange={(event) => handleCountryChange(event)}>
+      <NativeSelect
+        variant="standard"
+        onChange={(event) => handleCountryChange(event)}
+      >
         <option value="">Global</option>
         {countries.map((value) => (
           <option key={value} value={value}>

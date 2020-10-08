@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: #eee;
+  background: #1a1a2e;
+  animation: anim 5s infinite;
 }
 
 .image {
@@ -10,7 +11,28 @@
   height: 250px;
   margin-top: 30px;
   margin-bottom: 10px;
+  position: relative;
+  /* animation-name: anim;
+  animation-duration: 4s; */
   /* margin: 20px auto; */
+}
+
+@keyframes anim {
+  0% {
+    background: #1a1a2e;
+  }
+  25% {
+    background: #16213e;
+  }
+  50% {
+    background: #111;
+  }
+  75% {
+    background: #16213e;
+  }
+  100% {
+    background: #1a1a2e;
+  }
 }
 
 @media (max-width: 770px) {
